@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		
+	</head>
+	<style type="text/css">
+		.phone{
+			display: none;
+		}
+		.phone>img{
+			width:100%;
+			float: left;
+		}
+		/*.pc{
+			min-width: 1000px;
+		}*/
+		.head{
+			height:80px;
+			background: white;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.head img{
+			height:60px;
+			margin-left: 50px;
+		}
+		.head div{
+			display: flex;
+			align-items: center;
+			margin-right:100px;
+		}
+		.head p{
+			display: inline-block;
+			padding: 10px 20px;
+			/*border-bottom: 2px solid #FFBA02;*/
+			margin: 0 5px;
+			font-weight: bold;
+			letter-spacing: 3px;
+			cursor: pointer;
+		}
+		.picbox img{
+			width:100%;
+		}
+		.foot{
+			height:80px;
+			background: black;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.abc>div:nth-of-type(1){
+			padding: 10px 0;
+			width:100%;
+			height:120px;
+			background: url(img/3333.png) no-repeat center;
+			background-size: cover;
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
+		.abc>div:nth-of-type(1) i{
+			display: block;
+			width:100%;
+			height:100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: rgba(174,0,0,0.5);
+		}
+		.abc>div:nth-of-type(1) p{
+			width: 58px;
+			height:58px;
+			border-radius: 100%;
+			position: relative;
+			background: url(img/j1.png) no-repeat center;
+			background-size: cover;
+			margin: 0 auto;
+		}
+		
+		.abc>div:nth-of-type(2){
+			padding: 20px 0;
+		}
+		.abc>div:nth-of-type(2) p{
+			width: calc(100% - 50px);
+			margin: 15px auto;
+			line-height: 2em;
+			
+		}
+		.abc>div:nth-of-type(1) p img{
+			width:38px;
+			height: auto;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.abc-2>div{
+			display: none;
+		}
+		.abc-1 em{
+			display: block;
+			position: absolute;
+			left: 32px;
+			top: 93px;
+			border-left:10px solid transparent;
+			border-right:10px solid transparent;
+			border-bottom:10px solid white;
+			display: none;
+		}
+		.abc>div:nth-of-type(1) p.active{
+			width: 85px;
+			height:85px;
+		}
+		.abc>div:nth-of-type(1) p.active img{
+			width: 115px;
+		}
+		.abc>div:nth-of-type(1) p.active em{
+			display: block;
+		}
+		@media screen and (max-width: 600px) {
+		    .pc{
+		    	display: none;
+		    }
+		    .phone{
+		    	display: block;
+		    }
+		}
+		
+	</style>
+
+	<body>
+		<div class="pc">
+		<div class="head">
+			<img src="img/logo.gif"/>
+			<div>
+				<p>平台介绍</p>
+				<p>案例反馈</p>
+				<p>玩法详解</p>
+				<p>入会流程</p>
+				<p>咨询入会</p>
+			</div>
+		</div>
+		<div class="picbox">
+			<div class="mui-slider">
+				<!-- 轮播图的图片容器 -->
+				<!-- 如果要添加无缝轮播图 轮播图图片容器要添加一个mui-slider-loop 类名 -->
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 图片要多放2个图片 第一张是最后一张 最后一张是第一张 第一张和最后一张要添加mui-slider-item-duplicate 类名 -->
+					<!--支持循环，需要重复图片节点-->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+					<!--支持循环，需要重复图片节点-->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+				</div>
+				<!-- 轮播图的小圆点容器 -->
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+
+		</div>
+		<div class="picbox">
+			<img src="img/1.png"/>
+		</div>
+		<div class="picbox">
+			<img src="img/2.png"/>
+		</div>
+		<div class="picbox">
+			<img src="img/3.png"/>
+		</div>
+		<div class="picbox">
+			<img src="img/4.png"/>
+		</div>
+		<div class="picbox">
+			<div class="lb_gl" style="">
+			<div class="container">
+				<h1 class="turn_3d">
+					<p style="font-size: 50px;margin-bottom: 15px;font-weight: bold;color: black;letter-spacing: 25px;margin-top: 50px;">反馈截图</p>
+					<p style="font-size: 18px;letter-spacing: 15px;margin-bottom: 50px;color: black;">真凭实据，说出来你都不信</p>
+				</h1>
+				<div class="pictureSlider poster-main">
+					<div class="poster-btn poster-prev-btn"></div>
+					<ul id="zturn" class="poster-list">
+						<li class="poster-item zturn-item">
+							<img src="img/31.jpg"/>
+						</li>
+						<li class="poster-item zturn-item" >
+							<img src="img/32.jpg"/>
+						</li>
+						<li class="poster-item zturn-item" >
+							<img src="img/33.png"/>
+						</li>
+						<li class="poster-item zturn-item" >
+							<img src="img/34.png"/>
+						</li>
+						<li class="poster-item zturn-item" >
+							<img src="img/35.png"/>
+						</li>
+						<li class="poster-item zturn-item" >
+							<img src="img/36.jpg"/>
+						</li>
+						
+					</ul>
+				</div>
+		</div>
+				
+		</div>
+
+		</div>
+		<div class="picbox">
+			<img src="img/6.png"/>
+		</div>
+		<div>
+			<p style="text-align: center;font-size: 50px;margin-bottom: 15px;font-weight: bold;color: black;letter-spacing: 25px;margin-top: 50px;">入会通道</p>
+			<div style="display: flex;justify-content: space-around;padding: 100px 0 150px 0;">
+				<img src="img/1111.jpg"/>
+				<img src="img/1111.jpg"/>
+			</div>
+		</div>
+		<div class="foot">
+			备案
+		</div>
+		</div>
+		
+		<div class="phone clearfix">
+			<img src="img/phone1.png"/>
+			<div class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div>
+							<img src="img/banner.png"/>
+						</div>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<img src="img/212.png"/>
+			<img src="img/phone3.png"/>
+			<img src="img/phone4.png"/>
+			<img src="img/phone12.png"/>
+			<div class="mui-slider" style="height:460px;">
+				<div class="mui-slider-group mui-slider-loop">
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div>
+							<img src="img/36.jpg"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/31.jpg"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/32.jpg"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/33.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/34.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/35.png"/>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div>
+							<img src="img/36.jpg"/>
+						</div>
+					</div>
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div>
+							<img src="img/31.png"/>
+						</div>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<img src="img/123.png"/>
+			
+			<div class="abc">
+				<div class="abc-1">
+					<i></i>
+					<p onclick="tabfn(this,0)" style="background-image: url(img/j1.png);">
+						<img src="img/j11.png"/>
+						<em></em>
+					</p>
+					<p class="active" onclick="tabfn(this,1)" style="background-image: url(img/j2.png);">
+						<img src="img/j22.png"/>
+						<em></em>
+					</p>
+					<p onclick="tabfn(this,2)" style="background-image: url(img/j3.png);">
+						<img src="img/j33.png"/>
+						<em></em>
+					</p>
+				</div>
+				<div class="abc-2">
+					<div>
+						<p>若有女生急约，客服将发到朋友圈中，并备注为急约。</p>
+						<p>符合等级的男会员报名后若被急约女生看中，成功几率为百分之百。</p>
+					</div>
+					<div style="display: block;">
+						<p>该权限分为报名被翻牌和女生自主翻牌两种。</p>
+						<p>男会员入会后客服会把男生档案发到女生平台，若被合眼缘的妹子看上客服将主动联系男会员。</p>
+						<p>会员也可以报名客服发到微博的女生。</p>
+					</div>
+					<div>
+						<p>每种会员等级权限的直推女生个数都不尽相同。</p>
+						<p>客服会按照会员的理想型进行筛选，将近期活跃的女生推荐给男会员。</p>
+						<p>如果女生超过48小时未添加，联系客服可重新推荐</p>
+					</div>
+				</div>
+			</div>
+			<img src="img/phone8.png"/>
+			<img src="img/phone9.png"/>
+			<div style="position: relative;float: left;">
+				<img style="width:100%;" src="img/phone10.png"/>
+				<img style="width:150px;height:150px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);" src="img/1111.jpg"/>
+			</div>
+			
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/zturn.js"></script>
+<script type="text/javascript">
+	
+	var gallery = mui('.mui-slider');
+	/*调用slider初始化轮播图*/
+	gallery.slider({
+		  /*自动轮播图的间隔时间*/
+		  interval: 2000 
+	});	
+	
+	
+	$('.head p').each(function(){
+		$(this).hover(function(){
+			$(this).css('border-bottom','2px solid #FFBA02')
+		},function(){
+			$(this).css('border-bottom','none')
+		})
+	})
+	
+	function tabfn(that,index){
+		$('.abc-1 p').removeClass('active')
+		$(that).addClass('active')
+		$('.abc-2 div').hide()
+		$('.abc-2 div').eq(index).show()
+	}
+	
+	var aa=new zturn({
+			id:"zturn",
+			opacity:0.9,
+			width:382,
+			Awidth:1024,
+			scale:0.9,
+			auto:true,//是否轮播 默认5000
+			turning:1000//轮播时长
+		})
+		var ab=new zturn({
+			id:"zturn2",
+			opacity:0.8,
+			width:382,
+			Awidth:1024,
+			scale:0.6,
+			auto:true
+		})
+
+</script>
