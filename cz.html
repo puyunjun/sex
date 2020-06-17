@@ -168,45 +168,6 @@
 <script type="text/javascript" src="https://js.users.51.la/20453717.js"></script>
 <script type="text/javascript">
 
-    var gallery = mui('.mui-slider');
-    /*调用slider初始化轮播图*/
-    gallery.slider({
-        /*自动轮播图的间隔时间*/
-        interval: 2000
-    });
 
-
-    $('.head p').each(function(){
-        $(this).hover(function(){
-            $(this).css('border-bottom','2px solid #FFBA02')
-        },function(){
-            $(this).css('border-bottom','none')
-        })
-    })
-
-    function tabfn(that,index){
-        $('.abc-1 p').removeClass('active')
-        $(that).addClass('active')
-        $('.abc-2 div').hide()
-        $('.abc-2 div').eq(index).show()
-    }
-
-    var aa=new zturn({
-        id:"zturn",
-        opacity:0.9,
-        width:382,
-        Awidth:1024,
-        scale:0.9,
-        auto:true,//是否轮播 默认5000
-        turning:1000//轮播时长
-    })
-    var ab=new zturn({
-        id:"zturn2",
-        opacity:0.8,
-        width:382,
-        Awidth:1024,
-        scale:0.6,
-        auto:true
-    })
 
 </script>
