@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="utf-8" />
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+</head>
+<style type="text/css">
+    .phone{
+        display: none;
+    }
+    .phone>img{
+        width:100%;
+        float: left;
+    }
+    /*.pc{
+        min-width: 1000px;
+    }*/
+    .head{
+        height:80px;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .head img{
+        height:60px;
+        margin-left: 50px;
+    }
+    .head div{
+        display: flex;
+        align-items: center;
+        margin-right:100px;
+    }
+    .head p{
+        display: inline-block;
+        padding: 10px 20px;
+        /*border-bottom: 2px solid #FFBA02;*/
+        margin: 0 5px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        cursor: pointer;
+    }
+    .picbox img{
+        width:100%;
+    }
+    .foot{
+        height:80px;
+        background: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .abc>div:nth-of-type(1){
+        padding: 10px 0;
+        width:100%;
+        height:120px;
+        background: url(img/3333.png) no-repeat center;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .abc>div:nth-of-type(1) i{
+        display: block;
+        width:100%;
+        height:100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(174,0,0,0.5);
+    }
+    .abc>div:nth-of-type(1) p{
+        width: 58px;
+        height:58px;
+        border-radius: 100%;
+        position: relative;
+        background: url(img/j1.png) no-repeat center;
+        background-size: cover;
+        margin: 0 auto;
+    }
+
+    .abc>div:nth-of-type(2){
+        padding: 20px 0;
+    }
+    .abc>div:nth-of-type(2) p{
+        width: calc(100% - 50px);
+        margin: 15px auto;
+        line-height: 2em;
+
+    }
+    .abc>div:nth-of-type(1) p img{
+        width:38px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .abc-2>div{
+        display: none;
+    }
+    .abc-1 em{
+        display: block;
+        position: absolute;
+        left: 32px;
+        top: 93px;
+        border-left:10px solid transparent;
+        border-right:10px solid transparent;
+        border-bottom:10px solid white;
+        display: none;
+    }
+    .abc>div:nth-of-type(1) p.active{
+        width: 85px;
+        height:85px;
+    }
+    .abc>div:nth-of-type(1) p.active img{
+        width: 115px;
+    }
+    .abc>div:nth-of-type(1) p.active em{
+        display: block;
+    }
+    @media screen and (max-width: 600px) {
+        .pc{
+            display: none;
+        }
+        .phone{
+            display: block;
+        }
+    }
+
+</style>
+
+<body>
+<div class="pc">
+    <div class="head">
+        <img src="img/logo.gif"/>
+        <div>
+            <p>平台介绍</p>
+            <p>案例反馈</p>
+            <p>玩法详解</p>
+            <p>入会流程</p>
+            <p>咨询入会</p>
+        </div>
+    </div>
+
+    <div class="picbox">
+        <img src="img/cz.jpg"/>
+    </div>
+
+    <div class="foot">
+        备案
+    </div>
+</div>
+</body>
+
+</html>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/zturn.js"></script>
+<script type="text/javascript" src="https://js.users.51.la/20453717.js"></script>
+<script type="text/javascript">
+
+    var gallery = mui('.mui-slider');
+    /*调用slider初始化轮播图*/
+    gallery.slider({
+        /*自动轮播图的间隔时间*/
+        interval: 2000
+    });
+
+
+    $('.head p').each(function(){
+        $(this).hover(function(){
+            $(this).css('border-bottom','2px solid #FFBA02')
+        },function(){
+            $(this).css('border-bottom','none')
+        })
+    })
+
+    function tabfn(that,index){
+        $('.abc-1 p').removeClass('active')
+        $(that).addClass('active')
+        $('.abc-2 div').hide()
+        $('.abc-2 div').eq(index).show()
+    }
+
+    var aa=new zturn({
+        id:"zturn",
+        opacity:0.9,
+        width:382,
+        Awidth:1024,
+        scale:0.9,
+        auto:true,//是否轮播 默认5000
+        turning:1000//轮播时长
+    })
+    var ab=new zturn({
+        id:"zturn2",
+        opacity:0.8,
+        width:382,
+        Awidth:1024,
+        scale:0.6,
+        auto:true
+    })
+
+</script>
